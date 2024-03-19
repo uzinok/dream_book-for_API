@@ -6,20 +6,12 @@ import {
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 
-import rename from 'gulp-rename';
-
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
-import csso from 'postcss-csso';
 import gcmq from 'gulp-group-css-media-queries';
-
-import {
-	nunjucksCompile
-} from 'gulp-nunjucks';
-import htmlmin from 'gulp-htmlmin';
 
 import babel from 'gulp-babel';
 import minify from 'gulp-minify';
@@ -35,7 +27,6 @@ const {
 	parallel
 } = gulp;
 const sass = gulpSass(dartSass);
-let isDevelopment = true;
 
 const paths = {
 	dest: 'dest',
@@ -88,9 +79,7 @@ export function copy() {
 }
 
 export function styles() {
-	return src(paths.styles.src, {
-			sourcemaps: isDevelopment
-		})
+	return src(paths.styles.src)
 		.pipe(plumber())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gcmq())
@@ -98,25 +87,14 @@ export function styles() {
 			postUrl({
 				assetsPath: '../'
 			}),
-			autoprefixer(),
-			csso()
+			autoprefixer()
 		]))
-		.pipe(rename({
-			suffix: '.min'
-		}))
-		.pipe(dest(paths.styles.dest, {
-			sourcemaps: '.'
-		}))
+		.pipe(dest(paths.styles.dest))
 		.pipe(browserSync.stream());
 }
 
 export function html() {
 	return src(paths.html.src)
-		.pipe(nunjucksCompile())
-		.pipe(htmlmin({
-			removeComments: false,
-			collapseWhitespace: true
-		}))
 		.pipe(dest(paths.html.dest))
 		.pipe(browserSync.stream());
 }
