@@ -1,0 +1,120 @@
+.quote {
+	position: relative;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	text-align: center;
+
+	@media (min-width: $min-lg) {
+		padding-top: 98px;
+	}
+
+	@media screen and (prefers-reduced-motion: no-preference) {
+		&::before {
+			animation: bg 220s linear 0s infinite alternate;
+		}
+
+		&::after {
+			animation: bg-rev 220s linear 0s infinite alternate;
+		}
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		width: 1235px;
+		height: 666px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+	&::before {
+		top: 0;
+		top: -120px;
+		right: 50%;
+		background-image: url(../../img/cloud-1.png);
+	}
+
+	&::after {
+		top: 0;
+		top: -115px;
+		left: calc(50% - 150px);
+		background-image: url(../../img/cloud-2.png);
+	}
+}
+
+
+@keyframes bg {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes bg-rev {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+.quote-block {
+	position: relative;
+	box-sizing: border-box;
+	max-width: 950px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 36px 17px 35px;
+	font-size: 18px;
+	line-height: 30px;
+	border: 1.5px solid $color-primary;
+	border-radius: 20px;
+
+	@media (min-width: $min-lg) {
+		padding: 74px 66px 63px;
+		font-size: 20px;
+		line-height: 35px;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		width: 96px;
+		height: 25px;
+		background-image: url(../../img/quote-ornament.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		transform: translate(-50%, -50%);
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		bottom: -25px;
+	}
+
+	& p {
+		margin: 0;
+
+		& span {
+			font-weight: 700;
+			color: $color-primary;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 2em;
+		}
+	}
+}

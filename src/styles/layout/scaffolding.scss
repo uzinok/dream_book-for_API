@@ -23,6 +23,10 @@ img {
 }
 
 .main-page {
+	overflow: hidden;
+}
+
+.wrap {
 	max-width: 1137px;
 	margin-right: auto;
 	margin-left: auto;
