@@ -1,18 +1,24 @@
 .header {
+	position: relative;
 	padding-top: 28px;
+
+	@media (min-width: $min-lg) {
+		padding-top: 31px;
+	}
 
 	&::before {
 		content: "";
 		position: absolute;
-		width: 991px;
-		height: 470px;
 		top: 0;
 		left: 50%;
-		transform: translateX(-50%);
-		background-repeat: no-repeat;
+		width: 991px;
+		height: 470px;
 		background-image: url(../../img/star.svg), url(../../img/star.svg), url(../../img/star.svg);
+		background-repeat: no-repeat;
 		background-position: -9px 323px, 260px 408px, 913px 440px;
 		background-size: 30px 30px, 20px 20px, 20px 20px;
+		transform: translateX(-50%);
+		pointer-events: none;
 
 		@media (min-width: $min-lg) {
 			width: 1920px;
@@ -21,10 +27,6 @@
 			background-position: 71px 151px, 250px 463px, 458px 360px, 727px 445px, 1380px 477px, 1646px 353px, 1855px 71px;
 			background-size: 30px 30px, 43px 43px, 30px 30px, 20px 20px, 20px 20px, 43px 43px, 43px 43px;
 		}
-	}
-
-	@media (min-width: $min-lg) {
-		padding-top: 31px;
 	}
 }
 
@@ -145,19 +147,19 @@
 		letter-spacing: 0.05em;
 		transition: color $transition;
 
+		@media (min-width: $min-lg) {
+			padding: 17px 0;
+			font-weight: 500;
+			line-height: 25px;
+			letter-spacing: 0.05em;
+		}
+
 		&:hover {
 			color: $color-hover;
 		}
 
 		&:active {
 			color: $color-primary;
-		}
-
-		@media (min-width: $min-lg) {
-			padding: 17px 0;
-			font-weight: 500;
-			line-height: 25px;
-			letter-spacing: 0.05em;
 		}
 	}
 }

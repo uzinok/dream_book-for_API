@@ -84,7 +84,7 @@ function bdCanvas(canvas) {
 	}
 
 	function setup() {
-		for (let i = 0; i < (w / 90) * (h / 90); i++) {
+		for (let i = 0; i < (w / 70) * (h / 70); i++) {
 			arrStars.push(new Stars(w, h));
 			arrStars[i].draw();
 		}

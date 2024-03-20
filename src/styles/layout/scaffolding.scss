@@ -23,6 +23,7 @@ img {
 }
 
 .main-page {
+	max-width: 100%;
 	overflow: hidden;
 }
 
@@ -36,6 +37,11 @@ img {
 
 .db-lg {
 	@media (min-width: $min-lg) {
+		display: block;
+	}
+}
+.db-md {
+	@media (min-width: 780px) {
 		display: block;
 	}
 }

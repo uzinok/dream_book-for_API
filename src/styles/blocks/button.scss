@@ -23,8 +23,11 @@
 	appearance: none;
 
 	@media (max-width: 500px) {
+		box-sizing: border-box;
 		width: 100%;
 		max-width: 360px;
+		padding-right: 50px;
+		padding-left: 50px;
 	}
 
 	&:hover {
