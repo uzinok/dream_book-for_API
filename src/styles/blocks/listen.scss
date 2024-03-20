@@ -1,0 +1,64 @@
+.listen {
+	padding-top: 45px;
+	padding-bottom: 45px;
+
+	@media (min-width: $min-lg) {
+		padding-top: 73px;
+	}
+
+	& .wrap {
+		@media (min-width: 800px) {
+			display: flex;
+			align-items: flex-end;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			max-width: 551px;
+			margin-right: auto;
+			margin-left: auto;
+			background-image: url(../../img/hand.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			aspect-ratio: 551 / 447;
+		}
+	}
+}
+
+.listen__title {
+	margin: 0 0 20px;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 40px;
+	font-family: "Playfair Display", serif;
+	letter-spacing: 0.05em;
+
+	@media (min-width: 900px) {
+		margin-bottom: 25px;
+		font-size: 45px;
+		line-height: 55px;
+	}
+}
+
+.listen__content {
+
+	@media (min-width: 800px) {
+		width: 65%;
+	}
+	& p {
+		margin: 0 0 2em;
+		line-height: 25px;
+		letter-spacing: 0.05em;
+
+		@media (min-width: $min-lg) {
+			line-height: 30px;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
