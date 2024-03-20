@@ -1,0 +1,88 @@
+.about {
+	padding-top: 45px;
+	padding-bottom: 45px;
+
+	& .wrap {
+		@media (min-width: 800px) {
+			display: flex;
+			align-items: center;
+			flex-direction: row-reverse;
+			gap: 46px;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			max-width: 601px;
+			margin-right: auto;
+			margin-left: auto;
+			background-image: url(../../img/people.png), url(../../img/circles.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 80%, contain;
+			aspect-ratio: 1/1;
+
+			@media (max-width: 800px) {
+				margin-top: 21px;
+			}
+		}
+	}
+}
+
+.about__content {
+	@media (min-width: 800px) {
+		width: 65%;
+	}
+}
+
+.about__title {
+	font-weight: 600;
+	font-size: 35px;
+	line-height: 40px;
+	font-family: "Playfair Display", serif;
+	letter-spacing: 0.05em;
+
+	@media (min-width: $max-lg) {
+		margin-bottom: 29px;
+		font-size: 45px;
+		line-height: 55px;
+	}
+}
+
+.about__quotation {
+
+	&::before {
+		content: '';
+		float: left;
+		width: 60px;
+		height: 46px;
+		margin-right: 15px;
+		background-image: url(../../img/quotation.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+}
+
+.about__name {
+	margin: 0 0 4px;
+	font-weight: 700;
+	line-height: 30px;
+	color: $color-primary;
+	font-style: italic;
+	letter-spacing: 0.05em;
+
+}
+
+.about__text {
+	margin: 0;
+	font-size: 16px;
+	line-height: 25px;
+	font-style: italic;
+	letter-spacing: 0.05em;
+
+	@media (min-width: $max-lg) {
+		line-height: 30px;
+	}
+}
