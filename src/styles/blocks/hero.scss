@@ -1,0 +1,65 @@
+.hero {
+	padding-top: 108px;
+	padding-bottom: 45px;
+	text-align: center;
+	background-image: url(../../img/star.svg);
+	background-repeat: no-repeat;
+	background-position: center 34px;
+	background-size: 67px 67px;
+
+	@media (min-width: $min-lg) {
+		padding-top: 235px;
+		padding-bottom: 145px;
+		background-position: center 90px;
+		background-size: 112px 112px;
+	}
+}
+
+.hero__subtitle {
+	margin: 0 0 10px;
+	line-height: 30px;
+
+	@media (min-width: $min-md) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 14px;
+		font-size: 22px;
+		line-height: 26.82px;
+		gap: 10px;
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			width: 34px;
+			min-width: 34px;
+			height: 18px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+
+		&::before {
+			background-image: url(../../img/welcome-before.svg);
+		}
+
+		&::after {
+			background-image: url(../../img/welcome-after.svg);
+		}
+	}
+}
+
+.hero__title {
+	margin: 0 0 19px;
+	font-size: 45px;
+	line-height: 50px;
+	font-family: 'Playfair Display', serif;
+	color: $color-primary;
+
+	@media (min-width: $min-lg) {
+		margin-bottom: 34px;
+		font-size: 75px;
+		line-height: 85px;
+	}
+}

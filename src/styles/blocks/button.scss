@@ -1,0 +1,41 @@
+.button {
+	display: block;
+	width: fit-content;
+	min-width: 250px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 16px 62px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 25px;
+	font-family: inherit;
+	text-align: center;
+	color: $color-primary;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	background-color: transparent;
+	border: 1px solid $color-primary;
+	border-radius: 100px;
+	transition: border $transition,
+	background-color $transition,
+	color $transition;
+	appearance: none;
+
+	@media (max-width: 500px) {
+		width: 100%;
+		max-width: 360px;
+	}
+
+	&:hover {
+		color: $color-bg;
+		background-color: $color-hover;
+		border-color: $color-hover;
+	}
+
+	&:active {
+		color: $color-bg;
+		background-color: $color-primary;
+		border-color: $color-primary;
+	}
+}

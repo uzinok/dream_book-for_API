@@ -23,27 +23,26 @@ function bdCanvas(canvas) {
 
 	function resizeCanvas() {
 		w = canvas.width = window.innerWidth;
-		h = canvas.height = window.innerHeight;
-		// h = canvas.height = document.body.clientHeight;
-		console.log(h);
+		// h = canvas.height = window.innerHeight;
+		h = canvas.height = document.body.clientHeight;
 		return w, h;
 	}
 
-	window.addEventListener("resize", function () {
+	window.addEventListener("resize", function() {
 		windowResize();
 	});
 
 	function windowResize() {
 		arrStars.length = 0;
 		clearTimeout(check);
-		check = setTimeout(function () {
+		check = setTimeout(function() {
 			clearInterval(animations);
 			resizeCanvas();
 			setup();
 		}, 10)
 	}
 
-	const Stars = function (w, h) {
+	const Stars = function(w, h) {
 		this.x = Math.random() * w;
 		this.y = (Math.random() * h);
 		this.color = '#513a24';
@@ -51,7 +50,7 @@ function bdCanvas(canvas) {
 		this.minRadius = opts.minRadius + Math.random() * (opts.maxRadius - opts.minRadius);
 		this.maxRadius = this.minRadius + opts.intervalRadius;
 
-		this.draw = function () {
+		this.draw = function() {
 
 			ctx.beginPath();
 
@@ -70,13 +69,13 @@ function bdCanvas(canvas) {
 
 		}
 
-		this.update = function () {
+		this.update = function() {
 			this.check();
 			this.minRadius += opts.step * this.vector;
 			this.maxRadius += opts.step * this.vector;
 		}
 
-		this.check = function () {
+		this.check = function() {
 			if (this.minRadius > opts.maxRadius || this.minRadius < opts.minRadius) {
 				this.vector *= -1;
 			}
@@ -98,7 +97,7 @@ function bdCanvas(canvas) {
 		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: no-preference)')
 
 		if (prefersReducedMotion.matches) {
-			animations = setInterval(function () {
+			animations = setInterval(function() {
 				ctx.clearRect(0, 0, w, h);
 				for (let i = 0; i < arrStars.length; i++) {
 					arrStars[i].update();
@@ -109,5 +108,18 @@ function bdCanvas(canvas) {
 	}
 
 }
+
+// nav toggle
+const menubutton = document.querySelector('.header__nav-toggle');
+const menu = document.querySelector('.header__nav-list');
+
+menubutton.addEventListener('click', function() {
+	this.classList.toggle('header__nav-toggle--open');
+	if (this.classList.contains('header__nav-toggle--open')) {
+		this.removeAttribute('aria-expanded', 'true');
+	} else {
+		this.setAttribute('aria-expanded', 'true');
+	}
+});
 
 bdCanvas(document.querySelector('#bg-canvas'));

@@ -1,0 +1,14 @@
+.logo {
+	display: inline-block;
+	width: 43px;
+	height: 43px;
+	background-image: url(../../img/logo.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	@media (min-width: $min-lg) {
+		width: 52px;
+		height: 52px;
+	}
+}

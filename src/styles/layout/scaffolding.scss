@@ -1,10 +1,9 @@
 body {
+	position: relative;
 	margin: 0;
 	font-family: "Montserrat", sans-serif;
-	background-color: #1a191e;
 	color: #ffffff;
-	height: 5000px;
-	position: relative;
+	background-color: $color-bg;
 }
 
 img {
@@ -21,4 +20,18 @@ img {
 	padding: 0;
 	overflow: hidden;
 	border: none;
+}
+
+.main-page {
+	max-width: 1137px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 6px;
+	padding-left: 6px;
+}
+
+.db-lg {
+	@media (min-width: $min-lg) {
+		display: block;
+	}
 }
