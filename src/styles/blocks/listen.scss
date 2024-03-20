@@ -3,7 +3,7 @@
 	padding-bottom: 45px;
 
 	@media (min-width: $min-lg) {
-		padding-top: 73px;
+		padding-top: 83px;
 	}
 
 	& .wrap {
@@ -47,6 +47,10 @@
 
 	@media (min-width: 800px) {
 		width: 65%;
+	}
+
+	@media (min-width: $min-lg) {
+		width: 45%;
 	}
 	& p {
 		margin: 0 0 2em;

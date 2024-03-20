@@ -1,11 +1,11 @@
 .quote {
 	position: relative;
-	padding-top: 45px;
+	padding-top: 58px;
 	padding-bottom: 45px;
 	text-align: center;
 
 	@media (min-width: $min-lg) {
-		padding-top: 98px;
+		padding-top: 86px;
 	}
 
 	@media screen and (prefers-reduced-motion: no-preference) {
@@ -87,7 +87,7 @@
 	border-radius: 20px;
 
 	@media (min-width: $min-lg) {
-		padding: 74px 66px 63px;
+		padding: 74px 66px 78px;
 		font-size: 20px;
 		line-height: 35px;
 	}
@@ -123,7 +123,11 @@
 		}
 
 		&:not(:last-child) {
-			margin-bottom: 2em;
+			margin-bottom: 1.6em;
+
+			@media (min-width: $min-lg) {
+				line-height: 1.8em;
+			}
 		}
 	}
 }

@@ -4,7 +4,7 @@ function bdCanvas(canvas) {
 
 	const opts = {
 		minRadius: 0.1,
-		maxRadius: 1,
+		maxRadius: 0.6,
 		delay: 100,
 		step: 0.05,
 		trangles: 4,
@@ -84,7 +84,7 @@ function bdCanvas(canvas) {
 	}
 
 	function setup() {
-		for (let i = 0; i < (w / 70) * (h / 70); i++) {
+		for (let i = 0; i < (w / 60) * (h / 60); i++) {
 			arrStars.push(new Stars(w, h));
 			arrStars[i].draw();
 		}

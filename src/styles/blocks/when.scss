@@ -1,11 +1,15 @@
 .when {
-	padding-top: 45px;
+	padding-top: 56px;
 	padding-bottom: 45px;
 	text-align: center;
+
+	@media (min-width: $min-lg) {
+		padding-top: 106px;
+	}
 }
 
 .when__title {
-	margin: 0 0 15px;
+	margin: 0 0 28px;
 	font-weight: 600;
 	font-size: 35px;
 	line-height: 40px;
@@ -13,7 +17,7 @@
 	letter-spacing: 0.05em;
 
 	@media (min-width: $min-md) {
-		margin-bottom: 42px;
+		margin-bottom: 55px;
 		font-size: 45px;
 		line-height: 60px;
 	}
@@ -115,9 +119,9 @@
 				display: block;
 				width: 104px;
 				height: 95px;
-				margin-top: 10px;
+				margin-top: 6px;
 				margin-right: auto;
-				margin-bottom: 12px;
+				margin-bottom: 8px;
 				margin-left: auto;
 				background-repeat: no-repeat;
 				background-position: center;
