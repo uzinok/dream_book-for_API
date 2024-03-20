@@ -44,6 +44,7 @@
 
 .header__nav-toggle {
 	position: relative;
+	z-index: 2;
 	width: 30px;
 	height: 24px;
 	margin: 9px 0;
@@ -103,12 +104,15 @@
 
 	@media (max-width: $max-lg) {
 		position: absolute;
-		top: 123px;
+		top: 0;
 		left: 50%;
+		z-index: 1;
 		display: flex;
 		box-sizing: border-box;
-		width: fit-content;
-		min-width: 320px;
+		width: 100%;
+		min-width: 100vw;
+		height: 100vh;
+		padding-top: 123px;
 		padding-right: 6px;
 		padding-left: 6px;
 		background-color: rgba($color-bg, 0.75);

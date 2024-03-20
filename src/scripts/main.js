@@ -122,4 +122,11 @@ menubutton.addEventListener('click', function() {
 	}
 });
 
+menu.addEventListener('click', function(e) {
+	if (e.target.tagName == 'A') {
+		menubutton.classList.toggle('header__nav-toggle--open');
+		menubutton.removeAttribute('aria-expanded', 'true');
+	}
+});
+
 bdCanvas(document.querySelector('#bg-canvas'));
