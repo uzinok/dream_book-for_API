@@ -34,6 +34,10 @@
 		top: -120px;
 		right: 50%;
 		background-image: url(../../img/cloud-1.png);
+
+		@media (min-width: $min-xl) {
+			top: -30px;
+		}
 	}
 
 	&::after {
@@ -41,6 +45,10 @@
 		top: -115px;
 		left: calc(50% - 150px);
 		background-image: url(../../img/cloud-2.png);
+
+		@media (min-width: $min-xl) {
+			top: -20px;
+		}
 	}
 }
 

@@ -1,6 +1,28 @@
 .header {
 	padding-top: 28px;
 
+	&::before {
+		content: "";
+		position: absolute;
+		width: 991px;
+		height: 470px;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		background-repeat: no-repeat;
+		background-image: url(../../img/star.svg), url(../../img/star.svg), url(../../img/star.svg);
+		background-position: -9px 323px, 260px 408px, 913px 440px;
+		background-size: 30px 30px, 20px 20px, 20px 20px;
+
+		@media (min-width: $min-lg) {
+			width: 1920px;
+			height: 500px;
+			background-image: url(../../img/star.svg), url(../../img/star.svg), url(../../img/star.svg), url(../../img/star.svg), url(../../img/star.svg), url(../../img/star.svg), url(../../img/star.svg);
+			background-position: 71px 151px, 250px 463px, 458px 360px, 727px 445px, 1380px 477px, 1646px 353px, 1855px 71px;
+			background-size: 30px 30px, 43px 43px, 30px 30px, 20px 20px, 20px 20px, 43px 43px, 43px 43px;
+		}
+	}
+
 	@media (min-width: $min-lg) {
 		padding-top: 31px;
 	}
