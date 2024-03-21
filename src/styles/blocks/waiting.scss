@@ -1,0 +1,34 @@
+.waiting {
+
+	&::before {
+		top: 37px;
+
+		@media (min-width: $min-lg) {
+			top: -60px;
+		}
+	}
+
+	.header__nav-list,
+	.header__nav-toggle {
+		display: none;
+	}
+
+	& .hero {
+		padding-top: 146px;
+		background-position: center 71px;
+
+		@media (min-width: $min-lg) {
+			padding-top: 172px;
+			background-position: center 26px;
+		}
+	}
+
+	.hero__title {
+		margin-bottom: 59px;
+	}
+
+	.hero__title-count {
+		color: #E3C399;
+		font-variant-numeric: lining-nums;
+	}
+}

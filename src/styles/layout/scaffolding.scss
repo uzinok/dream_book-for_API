@@ -1,6 +1,8 @@
 html {
 	scroll-behavior: smooth;
+	height: 100%;
 }
+
 body {
 	position: relative;
 	min-width: 320px;
@@ -8,6 +10,10 @@ body {
 	font-family: "Montserrat", sans-serif;
 	color: #ffffff;
 	background-color: $color-bg;
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: 1fr;
+	background-image: url(../../img/canvas-bg.jpg);
 }
 
 img {
@@ -29,6 +35,15 @@ img {
 .main-page {
 	max-width: 100%;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+
+	& > header,
+	& > main,
+	& > footer,
+	& > div {
+		width: 100%;
+	}
 }
 
 .wrap {
