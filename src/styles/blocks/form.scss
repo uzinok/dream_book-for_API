@@ -6,7 +6,6 @@
 	max-width: 100%;
 	margin-bottom: 16px;
 	margin-bottom: 26px;
-	padding: 21px 10px;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 25px;
@@ -15,12 +14,7 @@
 	letter-spacing: 0.05em;
 	background-color: rgba(26, 25, 30, 0.5);
 	border: 1.5px solid $color-primary;
-	border-radius: 10px;
 	transition: border $transition;
-
-	&::placeholder {
-		color: rgba($color-primary, 48%);
-	}
 
 	&:hover {
 		border-color: #d72727;
@@ -33,12 +27,52 @@
 	}
 }
 
+.form__input {
+	margin-bottom: 15px;
+	padding: 19px 48px 19px 16px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	font-family: inherit;
+	background-color: rgba(#1B1A1F, 50%);
+	background-repeat: no-repeat;
+	background-position: right 20px center;
+	border-radius: 8px;
+
+	&::placeholder {
+		color: #ffffff;
+		opacity: 1;
+	}
+
+	&--card {
+		background-image: url(../../img/payment-card.svg);
+	}
+
+	&--date {
+		background-image: url(../../img/payment-calendar.svg);
+	}
+
+	&--cvv {
+		background-image: url(../../img/payment-cvv.svg);
+
+		@media (min-width: $min-md) {
+			max-width: 224px;
+		}
+	}
+}
+
 .form__textarea {
 	min-height: 175px;
+	padding: 21px 10px;
+	border-radius: 10px;
 
 	@media (min-width: $min-md) {
 		min-height: 158px;
 		padding-right: 15px;
 		padding-left: 15px;
+	}
+
+	&::placeholder {
+		color: rgba($color-primary, 48%);
 	}
 }

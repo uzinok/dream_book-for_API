@@ -1,0 +1,52 @@
+.payment {
+	max-width: 616px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 7px 13px 30px;
+	box-sizing: border-box;
+	border: 1.5px solid $color-primary;
+	border-radius: 20px;
+
+	@media (min-width: $min-md) {
+		padding: 35px 30px 42px;
+	}
+
+	& > b {
+		display: block;
+		margin-bottom: 5px;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 63.98px;
+		font-family: "Playfair Display", serif;
+		text-align: center;
+		color: $color-primary;
+		font-variant-numeric: lining-nums;
+
+		@media (min-width: $min-md) {
+			margin-bottom: 25px;
+		}
+	}
+
+	& p {
+		margin: 22px 0 17px;
+		font-size: 14px;
+		line-height: 25px;
+		text-align: initial;
+
+		@media (min-width: $min-md) {
+			margin: 7px 0 20px;
+		}
+	}
+
+	& .button {
+		margin: 0;
+	}
+}
+
+.payment__grid-row {
+	@media (min-width: $min-md) {
+		display: grid;
+		gap: 16px;
+		grid-template-columns: 1fr auto;
+	}
+}
