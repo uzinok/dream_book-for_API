@@ -32,11 +32,10 @@ function bdCanvas(canvas) {
 		windowResize();
 	});
 
-	document.body.addEventListener("DOMSubtreeModified", function (e) {
-		window.setTimeout(function () {
+	document.body.addEventListener("DOMSubtreeModified", function(e) {
+		window.setTimeout(function() {
 			windowResize();
 		}, 1500)
-		console.log('hi');
 	}, false);
 
 	function windowResize() {
@@ -155,8 +154,18 @@ $(document).ready(function() {
 			console.log('done!');
 		});
 
-				$bgBlock.fadeOut(1500, function() {
-					console.log('done!');
-				});
+		$bgBlock.fadeOut(1500, function() {
+			console.log('done!');
+		});
+	});
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function(e) {
+		e.preventDefault();
+		document.querySelector(this.getAttribute('href')).scrollIntoView({
+			behavior: 'smooth',
+		});
+		window.location.hash = this.getAttribute('href');
 	});
 });
