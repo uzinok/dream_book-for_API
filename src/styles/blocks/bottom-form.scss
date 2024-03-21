@@ -1,0 +1,82 @@
+.bottom-form {
+	max-width: 940px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	text-align: center;
+
+	@media (min-width: $min-lg) {
+		padding-top: 107px;
+	}
+}
+
+.bottom-form__title {
+	max-width: 860px;
+	margin: 0 auto 20px;
+	font-weight: 600;
+	font-size: 35px;
+	line-height: 40px;
+	font-family: "Playfair Display", serif;
+	letter-spacing: 0.05em;
+
+	@media (min-width: $min-md) {
+		margin-bottom: 25px;
+		font-size: 45px;
+		line-height: 55px;
+	}
+}
+
+.bottom-form__subtitle {
+	margin: 0 0 15px;
+	line-height: 25px;
+	letter-spacing: 0.05em;
+
+	@media (min-width: $min-md) {
+		margin-bottom: 25px;
+		line-height: 30px;
+	}
+}
+
+.bottom-form__annotation {
+	margin-top: -12px;
+	line-height: 26px;
+	font-style: italic;
+	letter-spacing: 0.05em;
+
+
+	@media (min-width: $min-md) {
+		margin-bottom: 25px;
+	}
+
+	@media (min-width: $min-lg) {
+		margin-top: 0;
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		width: 48px;
+		height: 48px;
+		margin: 0 auto 10px;
+		background-image: url(../../img/people-ava.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+
+		@media (min-width: $min-md) {
+			margin-bottom: 7px;
+		}
+	}
+}
+
+.bottom-form__annotation-name {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-weight: 600;
+	line-height: 30px;
+	color: $color-primary;
+	font-style: italic;
+	letter-spacing: 0.05em;
+}

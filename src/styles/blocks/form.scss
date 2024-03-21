@@ -1,0 +1,44 @@
+.form__input,
+.form__textarea {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 16px;
+	margin-bottom: 26px;
+	padding: 21px 10px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 25px;
+	font-family: inherit;
+	color: #ffffff;
+	letter-spacing: 0.05em;
+	background-color: rgba(26, 25, 30, 0.5);
+	border: 1.5px solid $color-primary;
+	border-radius: 10px;
+	transition: border $transition;
+
+	&::placeholder {
+		color: rgba($color-primary, 48%);
+	}
+
+	&:hover {
+		border-color: #d72727;
+	}
+
+	&:focus {
+		border-color: $color-primary;
+		outline: 1px solid $color-primary;
+		outline-offset: 0;
+	}
+}
+
+.form__textarea {
+	min-height: 175px;
+
+	@media (min-width: $min-md) {
+		min-height: 158px;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
