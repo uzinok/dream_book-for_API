@@ -1,0 +1,12 @@
+.footer {
+	padding-top: 45px;
+	padding-bottom: 45px;
+	line-height: 30px;
+	text-align: center;
+	color: $color-primary;
+	text-transform: uppercase;
+
+	@media (min-width: $min-lg) {
+		padding-top: 109px;
+	}
+}
