@@ -32,6 +32,13 @@ function bdCanvas(canvas) {
 		windowResize();
 	});
 
+	document.body.addEventListener("DOMSubtreeModified", function (e) {
+		window.setTimeout(function () {
+			windowResize();
+		}, 1500)
+		console.log('hi');
+	}, false);
+
 	function windowResize() {
 		arrStars.length = 0;
 		clearTimeout(check);
@@ -131,9 +138,25 @@ menu.addEventListener('click', function(e) {
 
 bdCanvas(document.querySelector('#bg-canvas'));
 
-	new Date().getFullYear();
-	const yearElem = document.querySelectorAll('.ryear');
+new Date().getFullYear();
+const yearElem = document.querySelectorAll('.ryear');
 
-	for (let i = 0; i < yearElem.length; i++) {
-		yearElem[i].innerText = new Date().getFullYear();
-	}
+for (let i = 0; i < yearElem.length; i++) {
+	yearElem[i].innerText = new Date().getFullYear();
+}
+
+$(document).ready(function() {
+	var $bgBlock = $('.index-block');
+	var $fgBlock = $('.waiting-block');
+
+
+	$('.button-next').on('click', function(e) {
+		$fgBlock.fadeIn(3000, function() {
+			console.log('done!');
+		});
+
+				$bgBlock.fadeOut(1500, function() {
+					console.log('done!');
+				});
+	});
+});

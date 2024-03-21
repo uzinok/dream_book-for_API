@@ -11,11 +11,11 @@
 </head>
 
 <body>
+	<canvas id="bg-canvas" class="bg-canvas"></canvas>
 
 	<div class="main-page">
-		<canvas id="bg-canvas" class="bg-canvas"></canvas>
 
-		<header class="header">
+		<header class="header index-block">
 			<div class="wrap">
 				<nav class="header__nav">
 					<div class="logo"></div>
@@ -52,7 +52,7 @@
 			</div>
 		</header>
 
-		<main>
+		<main class="index-block">
 
 			<section class="quote" id="quote">
 				<div class="wrap">
@@ -123,18 +123,61 @@
 						“После получения запроса я лично проведу анализ твоего сна. Результатом будет подробное расшифровка смысла сновидения.”
 						<span class="annotation__name">Садху Иба</span>
 					</p>
-					<button type="submit" class="button">Расшифровать</button>
+					<button type="button" class="button button-next">Расшифровать</button>
 				</form>
 			</section>
 
 		</main>
 
+		<div class="main-page waiting-block">
+
+			<header class="header waiting">
+				<div class="wrap">
+					<nav class="header__nav">
+						<div class="logo"></div>
+
+						<button class="header__nav-toggle" type="button" id="menubutton" aria-controls="menu" aria-haspopup="true">
+							<span class="visually-hidden">show navigation</span>
+						</button>
+
+						<ul class="header__nav-list" id="menu" aria-labelledby="menubutton">
+							<li>
+								<a href="#quote">О сновидениях</a>
+							</li>
+							<li>
+								<a href="#when">Когда обратиться за подсказкой?</a>
+							</li>
+							<li>
+								<a href="#about">О Садху Иба</a>
+							</li>
+							<li>
+								<a href="#form">Узнать значение сна</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="hero">
+						<p class="hero__subtitle">Добро пожаловать в мир толкования снов!</p>
+						<h1 class="hero__title">
+							Твой сон находится
+							<span class="db-lg">в очереди <span class="hero__title-count">140</span></span>
+						</h1>
+
+						<a href="#" class="button" type="button">пропустить очередь</a>
+					</div>
+				</div>
+			</header>
+
+		</div>
 		<footer class="footer">
 			© Copyright <span class="ryear">2024</span>
 		</footer>
 	</div>
 
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
 
+	</script>
 	<script src="./scripts/main.min.js"></script>
 </body>
 
