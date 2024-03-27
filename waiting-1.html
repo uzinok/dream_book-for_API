@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+
+	<div class="main-page">
+		<canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+		<header class="header waiting">
+			<div class="wrap">
+				<nav class="header__nav">
+					<div class="logo"></div>
+
+					<button class="header__nav-toggle" type="button" id="menubutton" aria-controls="menu" aria-haspopup="true">
+						<span class="visually-hidden">show navigation</span>
+					</button>
+
+					<ul class="header__nav-list" id="menu" aria-labelledby="menubutton">
+						<li>
+							<a href="#quote">About dreams</a>
+						</li>
+						<li>
+							<a href="#when">When to call for a clue?</a>
+						</li>
+						<li>
+							<a href="#about">About Sadhu Iba</a>
+						</li>
+						<li>
+							<a href="#form">Learn the meaning of a dream</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="hero">
+					<p class="hero__subtitle">Payment successful!</p>
+					<h1 class="hero__title">
+						Now your position
+						<span class="db-lg">in line is <span class="hero__title-count">1</span></span>
+					</h1>
+
+					<p class="hero__subtitle">Wait a little and you'll find out what your dream means</p>
+				</div>
+			</div>
+		</header>
+
+		<footer class="footer">
+			© Copyright <span class="ryear">2024</span>
+		</footer>
+	</div>
+
+
+	<script src="./scripts/main.js"></script>
+</body>
+
+</html>
